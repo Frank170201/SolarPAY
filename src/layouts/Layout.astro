@@ -1,22 +1,84 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "SolarPay SV - Energía Solar Accesible para Todos",
+	description = "Transforma tu hogar con paneles solares. Ahorra hasta 95% en tu factura eléctrica con planes de financiamiento flexibles. Instalación profesional en El Salvador."
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="paneles solares, energía solar, El Salvador, ahorro energético, financiamiento solar, instalación solar" />
+		<meta name="author" content="SolarPay SV" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	/* Reset and Base Styles */
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
 	html,
 	body {
 		margin: 0;
+		padding: 0;
 		width: 100%;
-		height: 100%;
+		min-height: 100%;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	body {
+		background: #ffffff;
+		color: #1a1a1a;
+		line-height: 1.6;
+	}
+
+	/* Typography */
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		line-height: 1.2;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	/* Utilities */
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
 	}
 </style>

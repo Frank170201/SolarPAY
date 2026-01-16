@@ -1,0 +1,97 @@
+---
+// Services/Features Section
+import Card from './Card.astro';
+---
+
+<section id="servicios" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nuestros Servicios</h2>
+      <p>Soluciones completas en energía solar para tu hogar o negocio</p>
+    </div>
+
+    <div class="services-grid">
+      <Card
+        icon="🔧"
+        title="Instalación de Paneles"
+        description="Instalación profesional de sistemas fotovoltaicos con garantía y seguimiento continuo."
+        link="#contacto"
+      />
+      <Card
+        icon="💰"
+        title="Financiamiento Flexible"
+        description="Planes de pago adaptados a tu presupuesto. Ahorra desde el primer día."
+        link="#contacto"
+      />
+      <Card
+        icon="⚙️"
+        title="Mantenimiento"
+        description="Servicio de mantenimiento preventivo y correctivo para máxima eficiencia."
+        link="#contacto"
+      />
+      <Card
+        icon="📊"
+        title="Consultoría Energética"
+        description="Análisis detallado de consumo y diseño de soluciones personalizadas."
+        link="#contacto"
+      />
+      <Card
+        icon="🌐"
+        title="Monitoreo Online"
+        description="Sistema de monitoreo en tiempo real para seguir tu producción energética."
+        link="#contacto"
+      />
+      <Card
+        icon="🏆"
+        title="Garantía Extendida"
+        description="Garantías de hasta 25 años en paneles y 10 años en inversores."
+        link="#contacto"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    padding: 5rem 2rem;
+    background: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .services-section {
+      padding: 3rem 1rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
